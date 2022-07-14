@@ -1,0 +1,462 @@
+!!::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => [a] -> Int -> a
+$::(a -> b) -> a -> b
+%::{==::a -> b -> Bool, coerce::Int -> b, quotRem::a -> a -> (a,a), ==::a -> c -> Bool, coerce::Int -> c, ==::a -> d -> Bool, coerce::Int -> d, ==::a -> e -> Bool, coerce::Int -> e, ==::Ordering -> Ordering -> Bool, compare::a -> f -> Ordering, coerce::Int -> f, -::a -> a -> a, coerce::Int -> a, *::a -> a -> a, ==::a -> g -> Bool, coerce::Int -> g, coerce::Int -> a, compare::a -> h -> Ordering, coerce::Int -> h, coerce::i -> a, -::i -> Int -> i, coerce::Int -> i} => a -> a -> Ratio a
+&&::Bool -> Bool -> Bool
+*::Int -> Int -> Int
+*::Integer -> Integer -> Integer
+*::Float -> Float -> Float
+*::Double -> Double -> Double
+**::{exp::a -> a, *::a -> a -> a, log::a -> a} => a -> a -> a
++::Int -> Int -> Int
++::Integer -> Integer -> Integer
++::Float -> Float -> Float
++::Double -> Double -> Double
+++::[a] -> [a] -> [a]
+-::Int -> Int -> Int
+-::Integer -> Int -> Integer
+-::Float -> Float -> Float
+-::Double -> Double -> Double
+/::Int -> Int -> Int
+/::Integer -> Integer -> Integer
+/::Float -> Float -> Float
+/::Double -> Double -> Double
+/=::{==::a -> b -> Bool} => a -> b -> Bool
+:%::a -> a -> Ratio a
+<::{==::Ordering -> Ordering -> a, compare::b -> c -> Ordering} => b -> c -> a
+<=::{==::Ordering -> Ordering -> Bool, compare::a -> b -> Ordering} => a -> b -> Bool
+==::IOErrorType -> IOErrorType -> Bool
+==::{==::a -> b -> Bool} => Maybe a -> Maybe b -> Bool
+==::Int -> Int -> Bool
+==::Char -> Char -> Bool
+==::Float -> Float -> Bool
+==::Double -> Double -> Bool
+==::Integer -> Integer -> Bool
+==::Ordering -> Ordering -> Bool
+==::() -> () -> Bool
+==::a -> b -> Bool
+==::{==::a -> b -> Bool} => [a] -> [b] -> Bool
+==::{==::a -> b -> Bool, ==::c -> d -> Bool} => Either a c -> Either b d -> Bool
+==::{==::a -> b -> Bool, ==::c -> d -> Bool} => (a,c) -> (b,d) -> Bool
+>::{==::Ordering -> Ordering -> a, compare::b -> c -> Ordering} => b -> c -> a
+>=::{==::Ordering -> Ordering -> Bool, compare::a -> b -> Ordering} => a -> b -> Bool
+>>::{>>=::a b -> (b -> c) -> a d} => a b -> c -> a d
+>>=::[a] -> (a -> [b]) -> [b]
+>>=::Maybe a -> (a -> Maybe b) -> Maybe b
+>>=::IO a -> (a -> IO b) -> IO b
+\\::{==::a -> b -> Bool} => [b] -> [a] -> [b]
+^::{==::Int -> a -> Bool, coerce::Int -> a, coerce::Int -> b, ==::Ordering -> Ordering -> Bool, compare::Int -> c -> Ordering, coerce::Int -> c, ==::Int -> d -> Bool, coerce::Int -> d, ==::Int -> e -> Bool, quotRem::Int -> Int -> (Int,Int), coerce::Int -> Int, coerce::Int -> e, *::b -> b -> b, -::Int -> Int -> Int} => b -> Int -> b
+^^::{==::Ordering -> Ordering -> Bool, compare::a -> b -> Ordering, coerce::Int -> b, *::a -> a -> a, /::a -> a -> a, coerce::Int -> a, *::a -> a -> a, -::a -> a -> a} => a -> a -> a
+let1__case::IO a -> IOResult
+let2__case::Maybe a -> a
+let5__case::Maybe a -> [a]
+let23__case::Ordering -> Ordering
+let28__case::[a] -> [b]
+let31__case::{==::Char -> Char -> Bool} => [Char] -> [[Char]]
+let41__case::Ordering -> [a]
+let43__case::Ordering -> a
+let45__case::Ordering -> a
+let49__case::Exception -> IO a
+let51__case::{return::a -> IO a} => [a] -> IO a
+let54__case::[a] -> a
+let78__case::([Char],[Char]) -> [([Char],[Char])]
+let82__case::[a] -> [a]
+let90__case::[a] -> [a]
+abs::{==::Ordering -> Ordering -> Bool, compare::a -> b -> Ordering, coerce::Int -> b, -::a -> a -> a, coerce::Int -> a} => a -> a
+acos::Float -> Float
+acos::Double -> Double
+acosh::{log::a -> a, +::a -> a -> a, exp::a -> a, *::a -> a -> a, log::a -> a, coerce::Float -> a, -::a -> b -> a, coerce::Float -> b} => a -> a
+all::(a -> Bool) -> [a] -> Bool
+and::[Bool] -> Bool
+any::(a -> Bool) -> [a] -> Bool
+asTypeOf::a -> b -> a
+asciiTab::[(Char,[Char])]
+asin::Float -> Float
+asin::Double -> Double
+asinh::{log::a -> a, +::a -> a -> a, exp::a -> a, *::a -> a -> a, log::a -> a, coerce::Float -> a} => a -> a
+atan::Float -> Float
+atan::Double -> Double
+atan2::{==::Ordering -> Ordering -> Bool, compare::Float -> Float -> Ordering, atan::Float -> Float, /::Float -> Float -> Float, ==::Float -> Float -> Bool, /::Float -> Float -> Float, *::Float -> Float -> Float, coerce::Float -> Float, atan::Float -> Float, +::Float -> Float -> Float, ==::Ordering -> Ordering -> Bool, -::Float -> Float -> Float, coerce::Int -> Float} => Float -> Float -> Float
+atanh::{/::a -> a -> a, -::a -> b -> a, log::a -> a, +::a -> a -> a, coerce::Float -> a, log::b -> b, -::b -> a -> b, coerce::Float -> b} => a -> a
+let46_aux::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => ([a],[a])
+let39_aux1::a
+let40_aux1::a
+let39_aux2::(a,[b])
+let40_aux2::(a,[b])
+break::(a -> Bool) -> [a] -> ([a],[a])
+catMaybes::[Maybe a] -> [a]
+catch::IO a -> (IOException -> IO a) -> IO a
+catchException::IO a -> (Exception -> IO a) -> IO a
+compare::{==::a -> b -> Bool} => Maybe a -> Maybe b -> Ordering
+compare::Char -> Char -> Ordering
+compare::Int -> Int -> Ordering
+compare::Float -> Float -> Ordering
+compare::Double -> Double -> Ordering
+compare::Integer -> Integer -> Ordering
+compare::Ordering -> Ordering -> Ordering
+compare::() -> () -> Ordering
+compare::[a] -> [b] -> Ordering
+compare::{compare::a -> b -> Ordering, compare::c -> d -> Ordering} => Either a c -> Either b d -> Ordering
+concat::[[a]] -> [a]
+concatMap::(a -> [b]) -> [a] -> [b]
+const::a -> b -> a
+let93_cont::[Char] -> [Char]
+cos::Float -> Float
+cos::Double -> Double
+cosh::{/::a -> a -> a, +::a -> a -> a, exp::a -> a, -::a -> a -> a, coerce::Int -> a, coerce::Float -> a} => a -> a
+curry::((a,b) -> c) -> a -> b -> c
+cycle::[a] -> [a]
+let95_d::{quotRem::Int -> Int -> (Int,Int)} => Int
+decodeFloat::Float -> (Integer,Int)
+delete::{==::a -> b -> Bool} => a -> [b] -> [b]
+deleteBy::(a -> b -> Bool) -> a -> [b] -> [b]
+digitToInt::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering, -::Int -> Int -> Int, fromEnum::a -> Int, fromEnum::Char -> Int, +::Int -> Int -> Int, -::Int -> Int -> Int, showsPrec::Int -> a -> [Char] -> [Char]} => a -> Int
+div::{==::a -> b -> Bool, ==::a -> c -> Bool, coerce::Int -> c, coerce::Int -> a, ==::Ordering -> Ordering -> Bool, compare::a -> d -> Ordering, coerce::Int -> d, coerce::e -> a, -::e -> Int -> e, coerce::Int -> e, quotRem::a -> a -> (a,a), -::b -> a -> b, coerce::Int -> b, -::a -> Int -> a, +::a -> a -> a} => a -> a -> a
+divMod::{==::a -> b -> Bool, ==::a -> c -> Bool, coerce::Int -> c, coerce::Int -> a, ==::Ordering -> Ordering -> Bool, compare::a -> d -> Ordering, coerce::Int -> d, coerce::e -> a, -::e -> Int -> e, coerce::Int -> e, quotRem::a -> a -> (a,a), -::b -> a -> b, coerce::Int -> b, -::a -> Int -> a, +::a -> a -> a} => a -> a -> (a,a)
+drop::{==::Ordering -> Ordering -> Bool, compare::a -> Int -> Ordering, -::a -> Int -> a} => a -> [b] -> [b]
+dropWhile::(a -> Bool) -> [a] -> [a]
+either::(a -> b) -> (c -> b) -> Either a c -> b
+elem::{==::a -> b -> Bool} => a -> [b] -> Bool
+elemIndex::{==::a -> b -> c} => ((a -> b -> c) -> d -> Bool) -> [d] -> Maybe Int
+elemIndices::{==::a -> b -> c} => ((a -> b -> c) -> d -> Bool) -> [d] -> [Int]
+elem_by::(a -> b -> Bool) -> b -> [a] -> Bool
+encodeFloat::Integer -> Int -> Float
+enumFrom::() -> [()]
+enumFrom::() -> [()]
+enumFromThen::() -> () -> [()]
+enumFromThen::() -> () -> [()]
+enumFromThen::{toEnum::Int -> a, fromEnum::b -> Int, fromEnum::c -> Int} => b -> c -> [a]
+enumFromThenTo::{toEnum::Int -> a, fromEnum::b -> Int, fromEnum::c -> Int, fromEnum::d -> Int} => b -> c -> d -> [a]
+enumFromTo::{toEnum::Int -> a, fromEnum::b -> Int, fromEnum::c -> Int} => b -> c -> [a]
+error::[Char] -> a
+even::{==::a -> b -> c, quotRem::a -> a -> (a,a), coerce::Int -> a, coerce::Int -> b} => a -> c
+exp::Float -> Float
+exp::Double -> Double
+exponent::{==::Int -> Int -> Bool, +::Int -> Int -> Int} => Float -> Int
+let21_f::{==::Int -> a -> Bool, coerce::Int -> a, ==::Int -> b -> Bool, quotRem::Int -> Int -> (Int,Int), coerce::Int -> Int, coerce::Int -> b, *::c -> c -> c, -::Int -> Int -> Int} => c -> Int -> c -> c
+fail::a -> [b]
+fail::a -> Maybe b
+fail::[Char] -> IO a
+filter::(a -> Bool) -> [a] -> [a]
+find::(a -> Bool) -> [a] -> Maybe a
+findIndex::(a -> Bool) -> [a] -> Maybe Int
+findIndices::(a -> Bool) -> [a] -> [Int]
+flip::(a -> b -> c) -> b -> a -> c
+floatDigits::a -> Int
+floatRadix::a -> Integer
+floatRange::a -> (Int,Int)
+fmap::(a -> b) -> Maybe a -> Maybe b
+fmap::{>>=::a b -> (b -> c d) -> a e, return::d -> c d} => (b -> d) -> a b -> a e
+foldl::(a -> b -> a) -> a -> [b] -> a
+foldl'::(a -> b -> a) -> a -> [b] -> a
+foldl1::(a -> a -> a) -> [a] -> a
+foldr::(a -> b -> b) -> b -> [a] -> b
+foldr1::(a -> a -> a) -> [a] -> a
+fromEnum::Int -> Int
+fromEnum::() -> Int
+fromEnum::() -> Int
+fromEnum::Char -> Int
+fromEnum::Bool -> Int
+fromEnum_0::{fromEnum::Char -> Int} => Int
+fromInteger::Integer -> Int
+fromIntegral::Int -> Int
+fromJust::Maybe a -> a
+fromMaybe::a -> Maybe a -> a
+fromObj::Obj -> a
+fromRational::Ratio Integer -> Float
+fromRational::Ratio Integer -> Double
+fst::(a,b) -> a
+let22_g::{==::Int -> a -> Bool, quotRem::Int -> Int -> (Int,Int), coerce::Int -> Int, coerce::Int -> a, *::b -> b -> b, ==::Int -> c -> Bool, coerce::Int -> c, -::Int -> Int -> Int} => b -> Int -> b
+gcd::{==::a -> b -> Bool, coerce::Int -> b, ==::a -> c -> Bool, coerce::Int -> c, ==::a -> d -> Bool, coerce::Int -> d, quotRem::a -> a -> (a,a), ==::Ordering -> Ordering -> Bool, compare::a -> e -> Ordering, coerce::Int -> e, -::a -> a -> a, coerce::Int -> a} => a -> a -> a
+let20_gcd'::{==::a -> b -> Bool, coerce::Int -> b, quotRem::a -> a -> (a,a)} => a -> a -> a
+genericDrop::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => Int -> [a] -> [a]
+genericIndex::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => [a] -> Int -> a
+genericLength::{+::Int -> Int -> Int} => [a] -> Int
+genericReplicate::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => Int -> a -> [a]
+genericSplitAt::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => Int -> [a] -> ([a],[a])
+genericTake::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, -::Int -> Int -> Int} => Int -> [a] -> [a]
+getLine::{>>=::IO Char -> (Char -> IO [Char]) -> IO [Char], ==::Char -> Char -> Bool, return::[Char] -> IO [Char], >>=::IO [Char] -> ([Char] -> a [Char]) -> IO [Char], ==::IOErrorType -> IOErrorType -> Bool, return::Char -> IO Char, >>=::IO [Char] -> ([Char] -> b [Char]) -> IO [Char], return::[Char] -> b [Char], return::[Char] -> a [Char]} => IO [Char]
+let50_getRest::{>>=::IO Char -> (Char -> IO [Char]) -> IO a, ==::IOErrorType -> IOErrorType -> Bool, return::Char -> IO Char, ==::Char -> Char -> Bool, return::[Char] -> IO [Char], >>=::IO [Char] -> ([Char] -> b [Char]) -> IO [Char], return::[Char] -> b [Char]} => IO a
+head::[a] -> a
+let94_hex::{-::Int -> Int -> Int, fromEnum::a -> Int, ==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering, fromEnum::Char -> Int, -::Int -> Int -> Int, fromEnum::Char -> Int} => a -> Int
+hugsReturn::a -> IOResult
+id::a -> a
+inRange::((),()) -> () -> Bool
+inRange::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, fromEnum::a -> Int, fromEnum::b -> Int, fromEnum::c -> Int} => (a,c) -> b -> Bool
+index::((),()) -> () -> Int
+index::{inRange::(a,b) -> c -> Bool, -::Int -> Int -> Int, fromEnum::c -> Int, fromEnum::a -> Int} => (a,b) -> c -> Int
+init::[a] -> [a]
+insert::{compare::a -> a -> Ordering} => a -> [a] -> [a]
+insertBy::(a -> a -> Ordering) -> a -> [a] -> [a]
+interact::{>>=::IO [Char] -> ([Char] -> IO ()) -> IO ()} => ([Char] -> [Char]) -> IO ()
+intersect::{==::a -> b -> Bool} => [a] -> [b] -> [a]
+intersectBy::(a -> b -> Bool) -> [a] -> [b] -> [a]
+intersperse::a -> [a] -> [a]
+ioError::IOException -> IO a
+ioe_description::IOException -> [Char]
+ioe_filename::IOException -> Maybe FilePath
+ioe_handle::IOException -> Maybe Handle
+ioe_location::IOException -> [Char]
+ioe_type::IOException -> IOErrorType
+isAlpha::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+isAlphaNum::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+isDenormalized::a -> Bool
+isDigit::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+isHexDigit::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+isIEEE::a -> Bool
+let70_isIdChar::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering, ==::a -> Char -> Bool} => a -> Bool
+isInfinite::a -> Bool
+isJust::Maybe a -> Bool
+isLower::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+isNaN::a -> Bool
+isNegativeZero::a -> Bool
+isNothing::Maybe a -> Bool
+isOctDigit::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+isPrefixOf::{==::a -> b -> Bool} => [a] -> [b] -> Bool
+let70_isSingle::{==::a -> Char -> Bool} => a -> Bool
+isSpace::{==::a -> Char -> b} => a -> b
+isSuffixOf::{==::a -> b -> Bool} => [a] -> [b] -> Bool
+let70_isSym::{==::a -> Char -> Bool} => a -> Bool
+isUpper::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => a -> Bool
+iterate::(a -> a) -> a -> [a]
+last::[a] -> a
+lcm::{==::a -> b -> Bool, coerce::Int -> b, ==::a -> c -> Bool, coerce::Int -> c, coerce::Int -> a, ==::Ordering -> Ordering -> Bool, compare::a -> d -> Ordering, coerce::Int -> d, -::a -> a -> a, coerce::Int -> a, *::a -> a -> a, quotRem::a -> a -> (a,a), ==::a -> e -> Bool, coerce::Int -> e, ==::a -> f -> Bool, coerce::Int -> f, ==::a -> g -> Bool, coerce::Int -> g} => a -> a -> a
+length::{+::Int -> Int -> Int} => [a] -> Int
+lex::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [([Char],[Char])]
+lexDigits::{==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering} => [a] -> [([a],[a])]
+lexEsc::{==::Char -> Char -> Bool, ==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, ==::Char -> Char -> Bool} => [Char] -> [([Char],[Char])]
+let70_lexExp::{==::Char -> Char -> Bool, ==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering} => [Char] -> [([Char],[Char])]
+let70_lexFracExp::{==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, ==::Char -> Char -> Bool} => [Char] -> [([Char],[Char])]
+lexLitChar::{==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Char -> Char -> Bool} => [Char] -> [([Char],[Char])]
+let65_lexStrItem::{==::Char -> Char -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering} => [Char] -> [([Char],[Char])]
+let65_lexString::{==::Char -> Char -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering} => [Char] -> [([Char],[Char])]
+lexmatch::{==::a -> b -> Bool} => [a] -> [b] -> ([a],[b])
+listToMaybe::[a] -> Maybe a
+log::Float -> Float
+log::Double -> Double
+logBase::{/::a -> a -> a, log::a -> a} => a -> a -> a
+lookup::{==::a -> b -> Bool} => a -> [(b,c)] -> Maybe c
+let47_m::(Integer,Int)
+let48_m::(Integer,Int)
+let57_mandatory::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [(a,[Char])]
+map::(a -> b) -> [a] -> [b]
+mapAccumL::a -> b -> [c] -> (b,[d])
+mapAccumR::a -> b -> [c] -> (b,[d])
+mapMaybe::(a -> Maybe b) -> [a] -> [b]
+max::{==::Ordering -> Ordering -> Bool, compare::a -> a -> Ordering} => a -> a -> a
+let42_max::a -> a -> a
+maxBound::()
+maxBound::Char
+maxBound::Int
+maximum::{==::Ordering -> Ordering -> Bool, compare::a -> a -> Ordering} => [a] -> a
+maximumBy::(a -> a -> Ordering) -> [a] -> a
+maybe::a -> (b -> a) -> Maybe b -> a
+maybeToList::Maybe a -> [a]
+min::{==::Ordering -> Ordering -> Bool, compare::a -> a -> Ordering} => a -> a -> a
+let44_min::a -> a -> a
+minBound::()
+minBound::Char
+minBound::Int
+minimum::{==::Ordering -> Ordering -> Bool, compare::a -> a -> Ordering} => [a] -> a
+minimumBy::(a -> a -> Ordering) -> [a] -> a
+mod::{==::a -> b -> Bool, ==::a -> c -> Bool, coerce::Int -> c, coerce::Int -> a, ==::Ordering -> Ordering -> Bool, compare::a -> d -> Ordering, coerce::Int -> d, coerce::e -> a, -::e -> Int -> e, coerce::Int -> e, quotRem::a -> a -> (a,a), -::b -> a -> b, coerce::Int -> b, -::a -> Int -> a, +::a -> a -> a} => a -> a -> a
+let95_n'::{quotRem::Int -> Int -> (Int,Int)} => Int
+negate::{-::a -> b -> a, coerce::Int -> a} => b -> a
+nonnull::(a -> Bool) -> [a] -> [([a],[a])]
+not::Bool -> Bool
+notElem::{==::a -> b -> Bool} => a -> [b] -> Bool
+nub::{==::a -> a -> Bool} => [a] -> [a]
+let34_nub'::{==::a -> a -> Bool} => [a] -> [a] -> [a]
+nubBy::(a -> a -> Bool) -> [a] -> [a]
+let35_nubBy'::[a] -> [a] -> [a]
+null::[a] -> Bool
+odd::{==::a -> b -> Bool, quotRem::a -> a -> (a,a), coerce::Int -> a, coerce::Int -> b} => a -> Bool
+let3_ok::Maybe a -> [a]
+let6_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ([Char],[Char]) -> [((),[Char])]
+let7_ok::([Char],a) -> [((),a)]
+let9_ok::([Char],a) -> [([b],a)]
+let10_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ((),[Char]) -> [([()],[Char])]
+let11_ok::([()],a) -> [([()],a)]
+let12_ok::([Char],a) -> [([b],a)]
+let13_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ([Char],[Char]) -> [([()],[Char])]
+let14_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ((),[Char]) -> [([()],[Char])]
+let15_ok::([()],a) -> [([()],a)]
+let16_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ([Char],[Char]) -> [([()],[Char])]
+let17_ok::a -> [a]
+let24_ok::a -> [b]
+let25_ok::a -> [a]
+let33_ok::(a,b) -> [b]
+let36_ok::a -> [a]
+let37_ok::[a] -> [a]
+let38_ok::[a] -> [[a]]
+let52_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => (a,[Char]) -> [a]
+let53_ok::([Char],[Char]) -> [a]
+let55_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => (a,[Char]) -> [a]
+let56_ok::([Char],[Char]) -> [a]
+let58_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ([Char],[Char]) -> [(a,[Char])]
+let59_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => (a,[Char]) -> [(a,[Char])]
+let60_ok::([Char],a) -> [(b,a)]
+let61_ok::{==::a -> b -> Bool, ==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => (a,[Char]) -> [((),[Char])]
+let62_ok::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ([Char],[Char]) -> [((),[Char])]
+let63_ok::a -> [a]
+let64_ok::{==::[Char] -> [Char] -> Bool} => ([Char],[Char]) -> [([Char],[Char])]
+let66_ok::{==::Char -> Char -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering} => ([Char],[Char]) -> [([Char],[Char])]
+let67_ok::([Char],a) -> [([Char],a)]
+let68_ok::[Char] -> [([Char],[Char])]
+let69_ok::([Char],a) -> [([Char],a)]
+let71_ok::{==::Char -> Char -> Bool, ==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering} => ([Char],[Char]) -> [([Char],[Char])]
+let72_ok::([Char],a) -> [([Char],a)]
+let73_ok::{==::Char -> Char -> Bool, ==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering} => [Char] -> [([Char],[Char])]
+let74_ok::([Char],a) -> [([Char],a)]
+let75_ok::([Char],a) -> [([Char],a)]
+let76_ok::([Char],a) -> [([Char],a)]
+let77_ok::([Char],a) -> [([Char],a)]
+let79_ok::{==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, ==::Char -> Char -> Bool} => ([Char],[Char]) -> [([Char],[Char])]
+let80_ok::([Char],a) -> [([Char],a)]
+let81_ok::(a,b) -> [(a,b)]
+let83_ok::{==::a -> Char -> Bool} => (b,[a]) -> [([a],[Char])]
+let84_ok::([a],b) -> [([c],b)]
+let86_ok::{toEnum::Int -> a} => (Int,b) -> [(a,b)]
+let87_ok::{toEnum::Int -> a} => (Int,b) -> [(a,b)]
+let88_ok::{toEnum::Int -> a} => (Int,b) -> [(a,b)]
+let91_ok::{==::a -> Char -> Bool} => (Char,[a]) -> [(Char,[Char])]
+let92_ok::([a],b) -> [(Char,b)]
+let96_ok::{+::Int -> Int -> Int, *::Int -> Int -> Int} => ([a],b) -> [(Int,b)]
+let98_ok::{-::a -> b -> a, coerce::Int -> a, ==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => ([Char],[Char]) -> [(a,[Char])]
+let99_ok::{-::a -> b -> a, coerce::Int -> a} => (b,c) -> [(a,c)]
+let100_ok::([Char],a) -> [(b,a)]
+let101_ok::(a,[Char]) -> [(a,b)]
+let57_optional::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [(a,[Char])]
+or::[Bool] -> Bool
+otherwise::Bool
+partition::(a -> Bool) -> [a] -> ([a],[a])
+pi::{*::a -> a -> a, coerce::Float -> a, atan::a -> a} => a
+pred::{-::a -> Int -> a} => a -> a
+prefix::a -> ([a],b) -> ([a],b)
+primCompAux::{compare::a -> b -> Ordering} => a -> b -> Ordering -> Ordering
+print::{>>=::IO () -> (() -> IO ()) -> IO a, showsPrec::Int -> b -> [Char] -> [Char]} => b -> IO a
+product::{*::a -> a -> a, coerce::Int -> a} => [a] -> a
+protectEsc::(Char -> Bool) -> ([Char] -> a) -> [Char] -> a
+putStrLn::{>>=::IO () -> (() -> IO ()) -> IO a} => [Char] -> IO a
+let19_q::{quotRem::a -> a -> (a,a)} => a
+let30_qs::[a]
+quot::{quotRem::a -> a -> (a,a)} => a -> a -> a
+quotRem::Int -> Int -> (Int,Int)
+quotRem::Integer -> Integer -> (Integer,Integer)
+let19_r::{quotRem::a -> a -> (a,a)} => a
+let95_r'::{toEnum::Int -> a, +::Int -> Int -> Int, fromEnum::Char -> Int, quotRem::Int -> Int -> (Int,Int)} => [a]
+range::((),()) -> [()]
+range::(a,a) -> [a]
+read::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> ()
+let97_read'::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool, -::a -> b -> a, coerce::Int -> a} => [Char] -> [(a,[Char])]
+let97_read''::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [(a,[Char])]
+readDec::{+::Int -> Int -> Int, *::Int -> Int -> Int, ==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering, -::Int -> Int -> Int, fromEnum::a -> Int, fromEnum::Char -> Int} => [a] -> [(Int,[a])]
+let85_readEsc::{==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, toEnum::Int -> Char, -::Int -> Int -> Int, fromEnum::Char -> Int, +::Int -> Int -> Int, *::Int -> Int -> Int, fromEnum::Char -> Int, -::Int -> Int -> Int, ==::Char -> Char -> Bool} => [Char] -> [(Char,[Char])]
+readField::{==::[Char] -> a -> Bool, ==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => a -> [Char] -> [((),[Char])]
+readHex::{+::Int -> Int -> Int, *::Int -> Int -> Int, ==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering, -::Int -> Int -> Int, fromEnum::a -> Int, fromEnum::Char -> Int, -::Int -> Int -> Int, fromEnum::Char -> Int} => [a] -> [(Int,[a])]
+readIO::{return::() -> IO (), ==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> IO ()
+readInt::{+::Int -> Int -> Int, *::Int -> Int -> Int} => Int -> (a -> Bool) -> (a -> Int) -> [a] -> [(Int,[a])]
+readList::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [([()],[Char])]
+readLitChar::{==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, toEnum::Int -> Char, -::Int -> Int -> Int, fromEnum::Char -> Int, +::Int -> Int -> Int, *::Int -> Int -> Int, fromEnum::Char -> Int, -::Int -> Int -> Int, ==::Char -> Char -> Bool} => [Char] -> [(Char,[Char])]
+readLn::{>>=::IO [Char] -> ([Char] -> IO a) -> IO b, >>=::IO Char -> (Char -> IO [Char]) -> IO [Char], ==::Char -> Char -> Bool, return::[Char] -> IO [Char], >>=::IO [Char] -> ([Char] -> c [Char]) -> IO [Char], ==::IOErrorType -> IOErrorType -> Bool, return::Char -> IO Char, >>=::IO [Char] -> ([Char] -> d [Char]) -> IO [Char], return::[Char] -> d [Char], return::[Char] -> c [Char], >>=::IO () -> (() -> e ()) -> IO a, return::() -> IO (), ==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool, return::() -> e ()} => IO b
+readOct::{+::Int -> Int -> Int, *::Int -> Int -> Int, ==::Ordering -> Ordering -> Bool, compare::a -> Char -> Ordering, -::Int -> Int -> Int, fromEnum::a -> Int, fromEnum::Char -> Int} => [a] -> [(Int,[a])]
+readParen::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => Bool -> ([Char] -> [(a,[Char])]) -> [Char] -> [(a,[Char])]
+readSigned::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool, -::a -> b -> a, coerce::Int -> a} => c -> [Char] -> [(a,[Char])]
+let8_readl::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [([()],[Char])]
+let8_readl'::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [([()],[Char])]
+reads::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => [Char] -> [((),[Char])]
+readsPrec::{==::Char -> Char -> Bool, ==::[Char] -> [Char] -> Bool, ==::Char -> Char -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool} => a -> [Char] -> [((),[Char])]
+realToFrac::{fromRational::Ratio Integer -> a, toRational::b -> Ratio Integer} => b -> a
+recip::{/::a -> a -> a, coerce::Int -> a} => a -> a
+reduce::{==::a -> b -> Bool, coerce::Int -> b, quotRem::a -> a -> (a,a), ==::a -> c -> Bool, coerce::Int -> c, ==::a -> d -> Bool, coerce::Int -> d, ==::a -> e -> Bool, coerce::Int -> e, ==::Ordering -> Ordering -> Bool, compare::a -> f -> Ordering, coerce::Int -> f, -::a -> a -> a, coerce::Int -> a} => a -> a -> Ratio a
+rem::{quotRem::a -> a -> (a,a)} => a -> a -> a
+repeat::a -> [a]
+replicate::{==::Ordering -> Ordering -> Bool, compare::a -> Int -> Ordering, -::a -> Int -> a} => a -> b -> [b]
+return::a -> [a]
+return::a -> Maybe a
+return::a -> IO a
+reverse::[a] -> [a]
+let4_rs::[a]
+let39_s'::a
+let40_s'::a
+let32_s''::{==::Char -> Char -> Bool} => ([Char],[Char])
+let39_s''::a
+let40_s''::a
+scaleFloat::{+::Int -> Int -> Int} => Int -> Float -> Float
+scanl::(a -> b -> a) -> a -> [b] -> [a]
+scanr::(a -> b -> b) -> b -> [a] -> [b]
+select::(a -> Bool) -> a -> ([a],[a]) -> ([a],[a])
+show::{showsPrec::Int -> a -> [Char] -> b} => a -> b
+showChar::a -> [a] -> [a]
+showField::{showsPrec::Int -> a -> b -> [Char]} => [Char] -> a -> b -> [Char]
+showInt::{==::Ordering -> Ordering -> Bool, compare::Int -> Int -> Ordering, ==::Int -> Int -> Bool, quotRem::Int -> Int -> (Int,Int), toEnum::Int -> a, +::Int -> Int -> Int, fromEnum::Char -> Int} => Int -> [a] -> [a]
+showList::{showsPrec::Int -> a -> [Char] -> [Char]} => [a] -> [Char] -> [Char]
+showLitChar::{==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool, showsPrec::Int -> Int -> [Char] -> [Char], fromEnum::Char -> Int, -::Int -> Int -> Int} => Char -> [Char] -> [Char]
+showParen::Bool -> ([Char] -> [Char]) -> [Char] -> [Char]
+showSigned::{==::Ordering -> Ordering -> Bool, compare::a -> Int -> Ordering, compare::b -> Int -> Ordering, -::a -> a -> a, coerce::Int -> a} => (a -> [Char] -> [Char]) -> b -> a -> [Char] -> [Char]
+showString::[a] -> [a] -> [a]
+let18_showl::{showsPrec::Int -> a -> [Char] -> [Char]} => [a] -> [Char] -> [Char]
+shows::{showsPrec::Int -> a} => a
+showsPrec::a -> Maybe b -> [Char] -> [Char]
+showsPrec::Ordering -> [Char] -> [Char]
+showsPrec::a -> () -> [Char] -> [Char]
+showsPrec::{==::Ordering -> Ordering -> Bool, compare::Char -> Char -> Ordering, ==::Ordering -> Ordering -> Bool, fromEnum::Char -> Int, -::Int -> Int -> Int} => a -> Char -> [Char] -> [Char]
+showsPrec::Int -> Integer -> [Char] -> [Char]
+showsPrec::Int -> Int -> [Char] -> [Char]
+showsPrec::Int -> Float -> [Char] -> [Char]
+showsPrec::Int -> Double -> [Char] -> [Char]
+showsPrec::a -> Bool -> [Char] -> [Char]
+showsPrec::{showsPrec::Int -> a -> [Char] -> [Char]} => [a] -> [Char] -> [Char]
+showsPrec::a -> Either b c -> d -> [Char]
+signum::{==::a -> b -> Bool, coerce::Int -> b, coerce::Int -> a, ==::Ordering -> Ordering -> Bool, compare::a -> c -> Ordering, coerce::Int -> c, coerce::d -> a, -::d -> Int -> d, coerce::Int -> d} => a -> a
+sin::Float -> Float
+sin::Double -> Double
+sinh::{/::a -> a -> a, -::a -> b -> a, exp::a -> a, exp::b -> b, -::b -> a -> b, coerce::Int -> b, coerce::Float -> a} => a -> a
+snd::(a,b) -> b
+span::(a -> Bool) -> [a] -> ([a],[a])
+splitAt::{==::Ordering -> Ordering -> Bool, compare::a -> Int -> Ordering, -::a -> Int -> a} => a -> [b] -> ([b],[b])
+sqrt::{exp::a -> a, *::a -> a -> a, log::a -> a, coerce::Float -> a} => a -> a
+subtract::{-::a -> b -> a} => b -> a -> a
+succ::{+::a -> a -> a, coerce::Int -> a} => a -> a
+sum::{+::a -> a -> a, coerce::Int -> a} => [a] -> a
+table::[(Char,[Char])]
+let89_table::[(Char,[Char])]
+tail::[a] -> [a]
+take::{==::Ordering -> Ordering -> Bool, compare::a -> Int -> Ordering, -::a -> Int -> a} => a -> [b] -> [b]
+takeWhile::(a -> Bool) -> [a] -> [a]
+tan::{/::a -> a -> a, sin::a -> a, cos::a -> a} => a -> a
+tanh::{/::a -> a -> a, -::a -> b -> a, exp::a -> a, exp::b -> b, -::b -> a -> b, coerce::Int -> b, coerce::Float -> a, +::a -> a -> a, -::a -> a -> a, coerce::Int -> a} => a -> a
+toEnum::Int -> Int
+toEnum::Int -> ()
+toEnum::Int -> ()
+toEnum::Int -> Char
+toEnum::Int -> Integer
+toEnum::Int -> Bool
+toInt::Int -> Int
+toInt::Integer -> Int
+toInteger::Int -> Integer
+toObj::a -> Obj
+toRational::{==::Integer -> a -> Bool, coerce::Int -> a, quotRem::Integer -> Integer -> (Integer,Integer), ==::Integer -> b -> Bool, coerce::Int -> b, ==::Integer -> c -> Bool, coerce::Int -> c, ==::Integer -> d -> Bool, coerce::Int -> d, ==::Ordering -> Ordering -> Bool, compare::Integer -> e -> Ordering, coerce::Int -> e, -::Integer -> Integer -> Integer, coerce::Int -> Integer, *::Integer -> Integer -> Integer, ==::Integer -> f -> Bool, coerce::Int -> f, coerce::Int -> Integer, compare::Integer -> g -> Ordering, coerce::Int -> g, coerce::h -> Integer, -::h -> Int -> h, coerce::Int -> h} => Integer -> Ratio Integer
+toRational::{==::Int -> a -> Bool, coerce::Int -> a, quotRem::Int -> Int -> (Int,Int), ==::Int -> b -> Bool, coerce::Int -> b, ==::Int -> c -> Bool, coerce::Int -> c, ==::Int -> d -> Bool, coerce::Int -> d, ==::Ordering -> Ordering -> Bool, compare::Int -> e -> Ordering, coerce::Int -> e, -::Int -> Int -> Int, coerce::Int -> Int, *::Int -> Int -> Int, ==::Int -> f -> Bool, coerce::Int -> f, coerce::Int -> Int, compare::Int -> g -> Ordering, coerce::Int -> g, coerce::h -> Int, -::h -> Int -> h, coerce::Int -> h} => Int -> Ratio Int
+transpose::[[a]] -> [[a]]
+uncurry::(a -> b -> c) -> (a,b) -> c
+undefined::a
+union::{==::a -> a -> Bool} => [a] -> [a] -> [a]
+unionBy::(a -> a -> Bool) -> [a] -> [a] -> [a]
+unlines::[[Char]] -> [Char]
+until::(a -> Bool) -> (a -> a) -> a -> a
+unwords::[[Char]] -> [Char]
+userError::[Char] -> IOException
+words::{==::Char -> Char -> Bool} => [Char] -> [[Char]]
+let26_xs::[a]
+let27_xs'::[a]
+let29_xs'::{==::Ordering -> Ordering -> Bool, compare::a -> Int -> Ordering, -::a -> Int -> a} => ([b],[b])
+let39_y::a
+let40_y::a
+let39_ys::[a]
+let40_ys::[a]
+zip::[a] -> [b] -> [(a,b)]
+zip3::[a] -> [b] -> [c] -> [(a,b,c)]
+zipWith::(a -> b -> c) -> [a] -> [b] -> [c]
+zipWith3::(a -> b -> c -> d) -> [a] -> [b] -> [c] -> [d]
+||::Bool -> Bool -> Bool
+ok

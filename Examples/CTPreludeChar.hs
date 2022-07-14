@@ -1,0 +1,267 @@
+{
+data Exception
+  = ArithException      ArithException
+  | ArrayException      ArrayException
+  | AssertionFailed     String
+  | AsyncException      AsyncException
+  | BlockedOnDeadMVar
+  | Deadlock
+  | DynException        Dynamic
+  | ErrorCall           [Char]
+  | ExitException       ExitCode
+  | IOException 	IOException	-- IO exceptions (from 'ioError')
+  | NoMethodError       [Char]
+  | NonTermination
+  | PatternMatchFail    [Char]    
+  | RecConError         [Char]
+  | RecSelError         [Char]
+  | RecUpdError         [Char];
+
+-- Maybe type ---------------------------------------------------------------
+
+data Maybe a = Nothing | Just a;
+
+
+(==) Nothing  Nothing  = True;
+(==) (Just x) (Just y) = x == y;
+(==) _ _               = False;
+
+compare Nothing Nothing = EQ;
+compare (Just x) (Just y) | x == y    = EQ
+                          | x == y    = LT
+                          | otherwise = GT;
+compare Nothing _       = LT;
+compare _ Nothing       = GT;
+
+show Nothing  = "Nothing";
+show (Just a) = "Just"; 
+ 
+maybe n f Nothing  = n;
+maybe n f (Just x) = f x;
+
+fmap f Nothing  = Nothing;
+fmap f (Just x) = Just (f x);
+
+isJust Nothing = False;
+isJust _       = True;
+
+isNothing Nothing = True;
+isNothing _       = False;
+
+fromJust Nothing  = error "Maybe.fromJust: Nothing";
+fromJust (Just x) = x;
+
+fromMaybe d x = case x of {Nothing -> d;Just v  -> v};
+
+maybeToList  Nothing   = [];
+maybeToList  (Just x)  = [x];
+
+listToMaybe []        =  Nothing;
+listToMaybe (a:_)     =  Just a;
+
+catMaybes ls = [x | (Just x) <- ls];
+
+mapMaybe _ []     = [];
+mapMaybe f (x:xs) =
+ let {rs = mapMaybe f xs} in
+ case f x of
+  {Nothing -> rs;
+   Just r  -> r:rs};
+
+
+-- Equality and Ordered classes ---------------------------------------------
+
+(/=) x  y    = not (x==y);
+
+(==) = primEqInt;
+
+overload
+(==) = primEqChar;
+
+overload
+(==) = primEqFloat;
+
+overload
+(==) = primEqDouble;
+
+overload
+(==) = primEqInteger;
+
+
+compare = primCmpChar;
+
+overload
+compare = primCmpInt;
+
+overload
+compare = primCmpFloat;
+
+overload
+compare = primCmpDouble;
+
+overload
+compare = primCmpInteger;
+
+
+(<=) x  y = compare x y /= GT;
+(<)  x  y = compare x y == LT;
+(>=) x  y = compare x y /= LT;
+(>)  x  y = compare x y == GT;
+
+max x y   | x <= y      = y
+          | otherwise   = x;
+
+min x y   | x <= y      = x
+          | otherwise   = y;
+
+data Ordering = LT | EQ | GT;
+
+otherwise    = True;
+
+show LT = "LT";
+show EQ = "EQ";
+show GT = "GT";
+
+(==) LT LT = True; 
+(==) EQ EQ = True;
+(==) GT GT = True;
+(==) _ _   = False;
+
+False && x   = False;
+True  && x   = x;
+
+--(||) False  x   = x;
+--(||) True x   = True;
+
+not True     = False;
+not False    = True;
+
+-- Character type -----------------------------------------------------------
+isSpace c =  c == ' ';
+
+isUpper c =  (c >= 'A') && (c <= 'Z');
+
+isLower c =  (c >= 'a') &&  (c <= 'z');
+
+isDigit c =  (c >= '0') &&  (c <= '9');
+
+isAlpha c =  (isUpper c)  ||  (isLower c);
+
+isAlphaNum c =  (isAlpha c)  ||  (isDigit c);
+{-
+digitToInt c
+ | isDigit c		=  fromEnum c - fromEnum '0'
+ | c >= 'a' && c <= 'f' =  fromEnum c - fromEnum 'a' + 10
+ | c >= 'A' && c <= 'F' =  fromEnum c - fromEnum 'A' + 10
+ | otherwise	        =  error ("Char.digitToInt: not a digit " ++ show c);
+-}
+
+-- Some standard functions --------------------------------------------------
+fst (x,_)       = x;
+
+snd (_,y)       = y;
+
+curry f x y     = f (x,y);
+
+uncurry f p     = f (fst p) (snd p);
+
+id    x         = x;
+
+const k _       = k;
+
+flip f x y      = f y x;
+
+($) f x           = f x;
+
+until p f x     = if p x then x else until p f (f x);
+
+asTypeOf        = const;
+
+error s         = throw (ErrorCall s);
+
+undefined       = error "Prelude.undefined";
+
+
+-- Numeric classes ----------------------------------------------------------
+
+negate x        = (coerce 0) - x;
+
+(+) = primPlusInt;
+(*) = primMulInt;
+(-) = primMinusInt;
+(/) = primDivInt;
+
+(+) = primPlusInteger;
+(*) = primMulInteger;
+(-) = primMinusInteger;
+(/) = primDivInteger;
+
+(+) = primPlusFloat;
+(*) = primMulFloat;
+(-) = primMinusFloat;
+(/) = primDivFloat;
+
+(+) = primPlusDouble;
+(*) = primMulDouble;
+(-) = primMinusDouble;
+(/) = primDivDouble;
+
+-- Standard list functions {PreludeList} ------------------------------------
+
+
+(==) [] []         =  True;
+(==) (x:xs) (y:ys) =  x==y && xs==ys;
+(==) _ _           =  False;
+
+
+[]     ++ ys      = ys;
+(x:xs) ++ ys      = x : (xs ++ ys);
+
+
+head (x:_)        = x;
+
+last [x]          = x;
+last (_:xs)       = last xs;
+
+tail (_:xs)       = xs;
+
+init [x]          = [];
+init (x:xs)       = x : init xs;
+
+null []           = True;
+null (_:_)        = False;
+
+
+map f xs          = [ f x | x <- xs ];
+
+filter p xs       = [ x | x <- xs, p x ];
+
+concat            = foldr (++) [];
+
+length            = foldl' (\n _ -> n + 1) 0;
+
+(x:_)  !! 0       = x;
+(_:xs) !! n | n>0 = xs !! (n-1);
+(_:_)  !! _       = error "Prelude.!!: negative index";
+[]     !! _       = error "Prelude.!!: index too large";
+
+
+foldl f z []      = z;
+foldl f z (x:xs)  = foldl f (f z x) xs;
+
+foldl' f a []     = a;
+foldl' f a (x:xs) = (foldl' f $! f a x) xs;
+
+foldl1 f (x:xs)   = foldl f x xs;
+
+foldr f z []      = z;
+foldr f z (x:xs)  = f x (foldr f z xs);
+
+foldr1 f [x]      = x;
+foldr1 f (x:xs)   = f x (foldr1 f xs);
+
+
+
+}
+
+
