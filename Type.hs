@@ -5,7 +5,7 @@ import Pred
 import Subst
 import SubsPred
 
-import List ((\\))
+import Data.List ((\\))
 
 data Type = Forall (Constrained SimpleType) deriving (Eq, Show)
 

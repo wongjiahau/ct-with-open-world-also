@@ -1,7 +1,7 @@
 module TIMain where
 
-import Char
-import List((\\), intersect, union, nub, sortBy, deleteBy, unionBy, find)
+import Data.Char
+import Data.List((\\), intersect, union, nub, sortBy, deleteBy, unionBy, find)
 import Id
 import SimpleType
 import Subst
@@ -12,7 +12,7 @@ import TIMonad
 import Lit
 import Pat
 import Unify
-import Monad (foldM)
+import Control.Monad (foldM)
 import Lcg (lcg)
 import PreDefs (nilC, consC, trueC, falseC)
 import Tup3
@@ -43,6 +43,7 @@ eif c t f       = If c t f
 
 elambda alt     = elet [[ (toid "_lambda", 	Nothing, [alt]) ]] (evar (toid "_lambda"))
 
+eguarded ::  [(Expr, Expr)] -> Expr
 eguarded        = foldr (\(c,t) e -> eif c t e) efail
 
 efail           = Const (toid "FAIL" :>: (CW, Forall ([] :=> TGen 0)))

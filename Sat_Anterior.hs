@@ -1,6 +1,6 @@
 module Sat where
 
-import Char
+import Data.Char
 import Id
 import SimpleType
 import Type
@@ -11,7 +11,7 @@ import Monad (foldM)
 import Subst
 import Lcg
 import Unify
-import List 
+import Data.List 
 import Sing (sing)
 import Maybe
 --import Trace
@@ -268,7 +268,7 @@ eqCl [] []         = True
 eqCl (x:xs) (y:ys) = (eqC x y) && (eqCl xs ys)
 eqCl _ _           = False
 
-remC = foldl (flip (deleteBy eqC))
+-- remC = foldl (flip (deleteBy eqC))
 
 cMatch (Constraint (i, t, _)) = any (\(Constraint (i', t', _)) -> i == i' && matchOk (t, t')) 
 kMatch (Constraint (i, t, _)) = any (\(Constraint (i', t', _)) -> i == i' && matchOk (t', t))

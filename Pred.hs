@@ -1,6 +1,6 @@
 module Pred where
 
-import List (union,intersect, (\\))
+import Data.List (union,intersect, (\\))
 import Id
 import SimpleType
 import Subst

@@ -5,7 +5,7 @@ import ParseToken   ( semiSep1, commaSep1
                     , natural, charLiteral, stringLiteral
                     , float, isReservedOp,reservedOp 
                     )
-import Char
+import Data.Char
 import ParseExpr
 import TIMonad   
 import Expr 
@@ -21,7 +21,8 @@ import SimpleType
 import PreDefs
 import Subst
 import Lit
-import System
+import System.IO
+import System.Environment
 
 exprTable = [[binary "." AssocRight], 
              [negprefix "-"],

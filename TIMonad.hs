@@ -6,17 +6,29 @@ import Subst
 import Unify
 import Pred
 import Type
-import List ((\\))
+import Data.List ((\\))
 import Debug
+import Control.Monad(liftM, ap)
+import Control.Applicative
 
 -----------------------------------------------------------------------------
 newtype TI a = TI (FreshIndex -> (FreshIndex,a))
 
 type FreshIndex = (Int, Int)             -- last fresh tyvar index so far
 
+instance Functor TI where
+  fmap = liftM
+
+instance Applicative TI where
+  pure  = return
+  (<*>) = ap
+
 instance Monad TI where
   return x   = TI (\i -> (i,x))
   TI m >>= f = TI (\i -> let (i',x) = m i; TI fx = f x in  fx i')
+
+instance MonadFail TI where
+  fail = error
 
 runTI      	:: TI a -> a
 runTI (TI m) 	= result where (_,result) = m (0, 1) 

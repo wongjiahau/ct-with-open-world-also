@@ -1,7 +1,7 @@
 module Subst where
 
 import SimpleType
-import List(nub, intersect, union)
+import Data.List(nub, intersect, union)
 
 type Subst  = [(Tyvar, SimpleType)]
 
@@ -24,6 +24,7 @@ merge s1 s2 = if agree then Just s else Nothing
                           apply s2 (TVar v))
                    (domain s1 `intersect` domain s2)
 
+mergeAll :: [Maybe Subst] -> Maybe Subst
 mergeAll = foldr cons (Just nullSubst)
   where cons (Just s) (Just s') = merge s s'
         cons _        _         = Nothing

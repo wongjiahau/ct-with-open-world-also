@@ -1,7 +1,7 @@
 module Assump where
 
 import Id  
-import List((\\))
+import Data.List((\\))
 import SimpleType
 import Subst
 import SubsType
@@ -9,7 +9,7 @@ import Lcg
 import TIMonad
 import Type
 import Pred 
-import List hiding (find)
+import Data.List hiding (find)
 import Unify
 import Sing (sing)
 

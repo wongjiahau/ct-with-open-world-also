@@ -2,7 +2,7 @@ module SubsType where
 
 import Type
 import Subst
-import List (intersect)
+import Data.List (intersect)
 
 instance Subs Type where
   apply s (Forall qt) = Forall (apply s qt)

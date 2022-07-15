@@ -43,8 +43,10 @@ module Parser(
              ) where
 
 import ParseError
-import Monad
-import Char
+import Control.Monad
+import Control.Applicative(Applicative, Alternative)
+import qualified Control.Applicative
+import Data.Char
 
 -----------------------------------------------------------
 -- Operators:
@@ -276,6 +278,10 @@ instance Functor Parser where
             Error err      -> Error err
            
 
+instance Applicative Parser where
+  pure  = return
+  (<*>) = ap
+
 -----------------------------------------------------------
 -- Monad: return, sequence (>>=) and fail
 -----------------------------------------------------------    
@@ -302,7 +308,7 @@ instance Monad Parser where
                  Error err1       -> Empty (Error err1)
       )                                                              
 
-  
+instance MonadFail Parser where  
   fail msg
     = Parser (\state -> 
         Empty (Error (newErrorMessage (Message msg) (statePos state))))
@@ -319,6 +325,17 @@ mergeErrorReply err1 reply
 -----------------------------------------------------------
 pzero :: Parser a
 pzero = mzero
+
+instance Alternative Parser where
+  empty = Parser (\state -> Empty (Error (unknownError state)))
+
+  (<|>) (Parser p1) (Parser p2) = Parser (\state ->
+        case (p1 state) of        
+          Empty (Error err) -> case (p2 state) of
+                                 Empty reply -> Empty (mergeErrorReply err reply)
+                                 consumed    -> consumed
+          other             -> other
+      )
 
 instance MonadPlus Parser where
   mzero

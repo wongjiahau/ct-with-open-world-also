@@ -9,7 +9,7 @@ import TIMonad
 import Lit
 import Unify
 import Subst
-import List (union)
+import Data.List (union)
 import Tup3
 import Debug
 

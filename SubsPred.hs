@@ -4,7 +4,7 @@ import Pred
 import SimpleType
 import Subst
 import Unify
-import List (union)
+import Data.List (union)
 
 instance Subs t => Subs (Constrained t) where
   apply      s (ps :=> t) = apply s ps :=> apply s t
